@@ -171,16 +171,21 @@ header ul li a:hover {
 }
 /* Hero Section */
 section.hero-section {
-  background-color: transparent; /* ubah dari var(--dark-primary) */
+  background-color: transparent;
   color: #fff;
   display: flex;
+  justify-content: center;
   align-items: center;
-  padding: 100px 120px 50px 200px;
+  text-align: center;
+  min-height: 100vh;
+  padding: 100px 20px;
+  box-sizing: border-box;
+  flex-direction: column;
 }
-
 
 .hero-section__title {
   font-size: 48px;
+  margin-bottom: 20px;
 }
 
 .hero-section__title span {
@@ -189,7 +194,25 @@ section.hero-section {
 
 .hero-section__desc {
   color: #c4c4c4;
+  font-size: 16px;
+  max-width: 600px;
 }
+
+/* ✅ Tambahkan media query untuk mobile */
+@media (max-width: 768px) {
+  section.hero-section {
+    padding: 60px 20px;
+  }
+
+  .hero-section__title {
+    font-size: 32px;
+  }
+
+  .hero-section__desc {
+    font-size: 14px;
+  }
+}
+
 
 #changing-word {
   display: inline-block;
@@ -208,42 +231,90 @@ section.hero-section {
 
 
 
-.social-icons {
-  margin: 18px 0;
-}
-
+/* Social Icons */
 ul.social-icons {
   list-style: none;
   display: flex;
+  justify-content: center; /* Biar ikonnya berada di tengah */
+  align-items: center;
+  gap: 15px;
+  padding: 0;
+  margin: 18px 0;
 }
 
 .social-icons li {
-  margin-right: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 50%;
   border: 1px solid var(--primary);
-  padding: 8px 12px;
+  width: 40px;
+  height: 40px;
+  transition: background-color 0.3s ease;
 }
 
 .social-icons li:hover {
   background-color: var(--primary);
-  transition: all 0.3s ease 0s;
 }
 
 .social-icons li a {
   text-decoration: none;
   color: #fff;
   font-size: 18px;
-  transition: all 0.3s ease 0s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  transition: color 0.3s ease;
+}
+
+/* Hero Buttons */
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
 }
 
 .hero-buttons button {
-  margin-right: 10px;
+  padding: 10px 20px;
+  background-color: var(--primary);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.hero-buttons button:hover {
+  background-color: #0fa9e6; /* warna lebih terang */
 }
 
 .hero-buttons button > a {
   text-decoration: none;
   color: #fff;
+  font-size: 14px;
 }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .social-icons {
+    gap: 10px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero-buttons button {
+    width: 100%;
+    max-width: 250px;
+  }
+}
+
 
 /* buttons */
 .btn {
