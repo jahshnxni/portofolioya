@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="./assets/img/favicon.png">
+  <title>Starvx - Portfolio</title>
+
+  <!-- Font Awesome icons -->
+  <script src="https://kit.fontawesome.com/a9cdbedf57.js" crossorigin="anonymous"></script>
+
+  <!-- Styling CSS -->
+  <!-- Theme 1 -->
+  <link rel="stylesheet" id="themeStylesheet" href="./assets/css/style.css">
+  <!-- Theme 2 -->
+  <!-- <link rel="stylesheet" href="./assets/css/style-two.css"> -->
+  <!-- Theme 3 -->
+  <!-- <link rel="stylesheet" href="./assets/css/style-three.css"> -->
+
+</head>
+<body>
+    <div class="wrapper">
+  <!-- Latar belakang bintang dan aurora -->
+  <div class="starry-bg">
+    <div class="aurora"></div>
+  </div>
+
+  <header>
+    <div>
+      <a href="./index.html"><span class="logo">STARVX-PORTOFOLIO</span></a>
+    </div>
+    <div>
+      <ul>
+        <li>
+          <a href="index.html">Home</a>
+        </li>
+        <li>
+            <a href="about.html">About</a>
+        </li>
+        <li>
+            <a href="projects.html">Projects</a>
+        </li>
+        <li>
+            <a href="contact.html">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+      <div>
+        <div>
+          <h4 title="Hello, How are you?">Hello There Welcome To My Portofolio!</h4>
+          <h2 class="hero-section__title">Hi there, I'm <span id="changing-word">Daffa</span></h2>
+          <p class="hero-section__desc">
+            I am a Web Developer skilled in Frontend Technologies, such as HTML, CSS, and JavaScript, creating interactive web experiences.
+            I'm passionate about blending design aesthetics with functionality.
+          </p>
+        </div>
+
+        <ul class="social-icons">
+          <!-- Social Icons -->
+          <li>
+            <a href="https://fb.me/sudharsandaniel.sudharsandaniel" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/sudharsan-a-b40506290/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+          </li>
+          <li>
+            <a href="https://instagram.com/sudharsan_daniel" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+          </li>
+          <li>
+            <a href="https://twitter.com/Sudharsandaniel" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+          </li>
+        </ul>
+
+        <div class="hero-buttons">
+          <button class="btn btn-primary" title="Got a cool project? Let’s work together!">Hire me</button>
+          <button class="btn btn-dark-outlined">
+            <a href="./assets/my resume/my resume.pdf" download>Download CV</a>
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Copyright &copy; 2025 - 
+      <a href="https://github.com/danielace1" target="_blank">Starvx</a> - All Rights Reserved.
+    </p>
+  </footer>
+  <script>
+    document.onkeydown = function (e) {
+        if (
+          e.key === "F12" ||
+          (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "J" || e.key === "C")) ||
+          (e.ctrlKey && e.key === "U")
+        ) {
+          return false;
+        }
+      };
+    document.addEventListener("contextmenu", (e) => e.preventDefault());
+  </script>
+  <!-- JS -->
+  <script src="./assets/js/script.js"></script>
+</div>
+</body>
+</html>
