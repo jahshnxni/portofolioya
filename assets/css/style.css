@@ -270,6 +270,7 @@ ul.social-icons {
 }
 
 /* Hero Buttons */
+/* Hero Buttons Container */
 .hero-buttons {
   display: flex;
   justify-content: center;
@@ -278,53 +279,16 @@ ul.social-icons {
   margin-top: 20px;
 }
 
-.hero-buttons button {
-  padding: 10px 20px;
-  background-color: var(--primary);
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: 600;
-  transition: background-color 0.3s ease;
-}
-
-.hero-buttons button:hover {
-  background-color: #0fa9e6; /* warna lebih terang */
-}
-
-.hero-buttons button > a {
-  text-decoration: none;
-  color: #fff;
-  font-size: 14px;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .social-icons {
-    gap: 10px;
-  }
-
-  .hero-buttons {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .hero-buttons button {
-    width: 100%;
-    max-width: 250px;
-  }
-}
-
-
-/* buttons */
+/* Tombol dengan kelas .btn */
 .btn {
   padding: 10px 20px;
   border-radius: 2px;
   border: none;
   cursor: pointer;
-  transition: all 0.3s ease 0s;
+  transition: all 0.3s ease;
 }
 
+/* Tombol Primary */
 .btn.btn-primary {
   background-color: var(--primary);
   color: var(--dark-primary);
@@ -333,9 +297,9 @@ ul.social-icons {
 
 .btn.btn-primary:hover {
   background-color: var(--primary-hover);
-  transition: all 0.3s ease 0s;
 }
 
+/* Tombol Dark Outlined */
 .btn-dark-outlined {
   background-color: var(--dark-primary);
   border: 1px solid var(--primary);
@@ -345,11 +309,32 @@ ul.social-icons {
 }
 
 .btn-dark-outlined:hover {
-  cursor: pointer;
   background-color: var(--primary);
   color: #fff !important;
-  transition: all 0.3s ease 0s;
 }
+
+/* Pastikan link di dalam tombol juga rapi */
+.hero-buttons button > a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+}
+
+/* Responsive untuk Hero Buttons dan tombol */
+@media (max-width: 768px) {
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center; /* agar tombol berada di tengah */
+    gap: 10px;
+  }
+  
+  .hero-buttons button {
+    width: 100%;
+    max-width: 250px;
+    margin: 0 auto; /* pastikan tombol di-center */
+  }
+}
+
 
 /* About Section */
 section.about-section {
