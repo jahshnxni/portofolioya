@@ -343,8 +343,10 @@ section.about-section {
   display: flex;
   align-items: center;
   padding: 100px 120px 50px 200px;
+  box-sizing: border-box;
 }
 
+/* Styling gambar profil About */
 .about-img img {
   width: 250px;
   height: 250px;
@@ -355,21 +357,13 @@ section.about-section {
   object-fit: cover;
 }
 
-.hero-img img {
-  width: 250px;
-  height: 250px;
-  padding: 2px;
-  border-radius: 50%;
-  border: 3px solid var(--primary);
-  box-shadow: 3px 5px 30px #03506e;
-  object-fit: cover;
-}
-
+/* Konten About */
 .about-content {
   margin-left: 100px;
   max-width: 600px;
 }
 
+/* Judul dan isi */
 .about-content h2 {
   font-size: 33px;
 }
@@ -393,6 +387,26 @@ section.about-section {
   color: var(--dark-primary);
 }
 
+/* Responsive untuk tampilan mobile */
+@media (max-width: 768px) {
+  section.about-section {
+    flex-direction: column;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .about-img,
+  .about-content {
+    margin: 0;
+  }
+  
+  .about-content {
+    margin-top: 30px;
+    max-width: 90%;
+  }
+}
+
+
 /* Projects Section */
 section.projects-section {
   background-color: transparent;
@@ -402,6 +416,9 @@ section.projects-section {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center; /* Tambahkan agar konten section di-center */
+  text-align: center;
+  box-sizing: border-box;
 }
 
 .projects-section h2 {
@@ -416,6 +433,7 @@ section.projects-section {
 .projects-cards {
   display: flex;
   justify-content: center;
+  align-items: center; /* Pastikan card ter-center secara vertikal juga */
   flex-wrap: wrap; /* Biar responsif dan bisa wrap */
   gap: 30px; /* Jarak antar card */
   margin-top: 40px;
@@ -428,7 +446,7 @@ section.projects-section {
   padding: 33px;
   background-color: #22282f;
   border-radius: 5px;
-  transition: all 0.5s ease 0s;
+  transition: all 0.5s ease;
   text-align: center;
 }
 
@@ -484,6 +502,7 @@ section.projects-section {
     padding: 40px 20px;
   }
 }
+
 
 
 /* Contact Section */
