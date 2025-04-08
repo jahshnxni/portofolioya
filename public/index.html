@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="./assets/img/favicon.png">
+  <title>Starvx - Portfolio</title>
+
+  <!-- Font Awesome icons -->
+  <script src="https://kit.fontawesome.com/a9cdbedf57.js" crossorigin="anonymous"></script>
+
+  <!-- Styling CSS -->
+  <!-- Theme 1 -->
+  <link rel="stylesheet" id="themeStylesheet" href="./assets/css/style.css">
+  <!-- Theme 2 -->
+  <!-- <link rel="stylesheet" href="./assets/css/style-two.css"> -->
+  <!-- Theme 3 -->
+  <!-- <link rel="stylesheet" href="./assets/css/style-three.css"> -->
+
+</head>
+<body>
+    <div class="wrapper">
+  <!-- Latar belakang bintang dan aurora -->
+  <div class="starry-bg">
+    <div class="aurora"></div>
+  </div>
+
+  <header>
+    <div>
+      <a href="./index.html"><span class="logo">STARVX-PORTOFOLIO</span></a>
+    </div>
+    <div>
+      <ul>
+        <li>
+          <a href="index.html">Home</a>
+        </li>
+        <li>
+            <a href="about.html">About</a>
+        </li>
+        
+        <li>
+            <a href="contact.html">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+      <div>
+        <div>
+          <h4 title="Hello, How are you?">Hello There Welcome To My Portofolio!</h4>
+          <h2 class="hero-section__title">Hi there, I'm <span id="changing-word">Dapa</span></h2>
+          <p class="hero-section__desc">
+            Welcome to my portfolio website. This website is designed to show about myself. But I will not give 100% about myself and my personal information because there is a special reason. Oh yes, I am very happy if you appreciate the design of this website because I am still new to learning so I still use html and css only. In the future I will use reactjs or nextjs
+          </p>
+        </div>
+
+        <ul class="social-icons">
+          <!-- Social Icons -->
+          <li>
+            <a href="https://www.facebook.com/share/14WtoBHZRr/?mibextid=qi2Omg" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+          </li>
+          <li>
+            <a href="https://wa.me/6288808912762" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/stapieks?igsh=emQ3MXE0ZjdxZnJ4" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+          </li>
+          <li>
+            <a href="https://www.threads.net/@stapieks" target="_blank"><i class="fa-brands fa-threads"></i></a>
+          </li>
+        </ul>
+
+        <div class="hero-buttons">
+          <button class="btn btn-primary">
+            <a href="contact.html">Hire Me</a>
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Copyright &copy; 2025 - 
+      <a href="https://github.com/Starpiek" target="_blank">Starvx</a> - All Rights Reserved.
+    </p>
+  </footer>
+  <!-- JS -->
+  <script src="./assets/js/script.js"></script>
+  <script>
+    const words = ["Dapa", "Starvx", "LaonGTPS", "Ilham", "ACIN"];
+  const wordElement = document.getElementById("changing-word");
+  let index = 0;
+
+  setInterval(() => {
+    wordElement.classList.add("fade-out");
+
+    setTimeout(() => {
+      // Ubah teks saat fade out selesai
+      index = (index + 1) % words.length;
+      wordElement.textContent = words[index];
+
+      // Fade in dengan blur keluar
+      wordElement.classList.remove("fade-out");
+      wordElement.classList.add("fade-in");
+
+      // Hapus class fade-in supaya bisa diulang
+      setTimeout(() => {
+        wordElement.classList.remove("fade-in");
+      }, 600);
+    }, 600);
+  }, 3000); // Ganti tiap 3 detik  
+  </script>
+  <script>
+    document.onkeydown = function (e) {
+        if (
+          e.key === "F12" ||
+          (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "J" || e.key === "C")) ||
+          (e.ctrlKey && e.key === "U")
+        ) {
+          return false;
+        }
+      };
+    document.addEventListener("contextmenu", (e) => e.preventDefault());
+  </script>
+</div>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="./assets/img/favicon.png">
+  <title>Starvx - Portfolio</title>
+
+  <!-- Font Awesome icons -->
+  <script src="https://kit.fontawesome.com/a9cdbedf57.js" crossorigin="anonymous"></script>
+
+  <!-- Styling CSS -->
+  <!-- Theme 1 -->
+  <link rel="stylesheet" id="themeStylesheet" href="./assets/css/style.css">
+  <!-- Theme 2 -->
+  <!-- <link rel="stylesheet" href="./assets/css/style-two.css"> -->
+  <!-- Theme 3 -->
+  <!-- <link rel="stylesheet" href="./assets/css/style-three.css"> -->
+
+</head>
+<body>
+    <div class="wrapper">
+  <!-- Latar belakang bintang dan aurora -->
+  <div class="starry-bg">
+    <div class="aurora"></div>
+  </div>
+
+  <header>
+    <div>
+      <a href="./index.html"><span class="logo">STARVX-PORTOFOLIO</span></a>
+    </div>
+    <div>
+      <ul>
+        <li>
+          <a href="index.html">Home</a>
+        </li>
+        <li>
+            <a href="about.html">About</a>
+        </li>
+        
+        <li>
+            <a href="contact.html">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+<link rel="stylesheet" id="themeStylesheet" href="./assets/css/style.css">
+
+<!-- Contact Section -->
+<main>
+<section class="contact-section" id="contact">
+    <h2>Contact <span>ME!</span></h2>
+    <form action="https://formspree.io/f/xdkepvkr" method="POST">
+      <div>
+        <input type="text" name="name" placeholder="FullName" required>
+      </div>
+      <div>
+        <input type="email" name="email" placeholder="Email" required>
+      </div>
+      <div>
+        <textarea name="message" placeholder="Type Message" rows="5"></textarea>
+      </div>
+      <div>
+        <button class="btn btn-primary">SEND MESSAGE</button>
+      </div>
+    </form>
+    <div class="contact__github">
+      <button class="btn">
+        <a href="https://github.com/Starpiek" target="_blank">
+          <i class="fa-brands fa-github"></i> Github
+        </a>
+      </button>
+    </div>
+  </section>
+</main>
+<footer>
+    <p>Copyright &copy; 2025 - 
+      <a href="https://github.com/Starpiek" target="_blank">Starvx</a> - All Rights Reserved.
+    </p>
+  </footer>
+  <script>
+    document.onkeydown = function (e) {
+        if (
+          e.key === "F12" ||
+          (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "J" || e.key === "C")) ||
+          (e.ctrlKey && e.key === "U")
+        ) {
+          return false;
+        }
+      };
+    document.addEventListener("contextmenu", (e) => e.preventDefault());
+  </script>
+  <script src="./assets/js/script.js"></script>
+</div>
+</body>
+</html>
