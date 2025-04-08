@@ -6,30 +6,7 @@ document.addEventListener("click", function (event) {
     event.target.classList.add("active-theme");
     document.getElementById("themeStylesheet").setAttribute("href", themeFile);
   }
-});
-
-const words = ["Daffa", "Starvx", "LaonGTPS", "Ilham", "ACIN"];
-  const wordElement = document.getElementById("changing-word");
-  let index = 0;
-
-  setInterval(() => {
-    wordElement.classList.add("fade-out");
-
-    setTimeout(() => {
-      // Ubah teks saat fade out selesai
-      index = (index + 1) % words.length;
-      wordElement.textContent = words[index];
-
-      // Fade in dengan blur keluar
-      wordElement.classList.remove("fade-out");
-      wordElement.classList.add("fade-in");
-
-      // Hapus class fade-in supaya bisa diulang
-      setTimeout(() => {
-        wordElement.classList.remove("fade-in");
-      }, 600);
-    }, 600);
-  }, 3000); // Ganti tiap 3 detik      
+});    
     // Pilih kontainer latar belakang
     const bg = document.querySelector('.starry-bg');
 

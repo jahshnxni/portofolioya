@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Education & Chart</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #111;
+        color: #fff;
+      }
+      
+      .container {
+        display: flex;
+        padding: 30px;
+        gap: 30px;
+      }
+      
+      .sidebar {
+        width: 300px;
+      }
+      
+      .tabs {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+      }
+      
+      .tab {
+        flex: 1;
+        padding: 10px;
+        border: none;
+        border-radius: 10px;
+        background-color: #222;
+        color: #ccc;
+        cursor: pointer;
+        margin-right: 5px;
+      }
+      
+      .tab.active {
+        background-color: #444;
+        color: #fff;
+      }
+      
+      .section-dj {
+        background-color: #1e1e1e;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      }
+      
+      .education-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 15px;
+      }
+      
+      .education-item img {
+        width: 50px;
+        height: 50px;
+        object-fit: contain;
+      }
+      
+      .education-item div {
+        font-size: 14px;
+      }
+      
+      .chart-box {
+        flex: 1;
+        background-color: #1e1e1e;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      }
+      
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar: Education / Experience -->
+    <div class="sidebar">
+      <div class="tabs">
+        <button class="tab active">Education</button>
+        <button class="tab">Experience</button>
+      </div>
+      <div class="section-dj">
+        <h3>Education</h3>
+        <div class="education-item">
+          <img src="https://upload.wikimedia.org/wikipedia/id/thumb/9/9f/Lambang_Universitas_Labuhanbatu.svg/1200px-Lambang_Universitas_Labuhanbatu.svg.png" alt="Universitas Labuhanbatu">
+          <div>
+            <strong>Universitas Labuhanbatu</strong><br />
+            2023 - 2027
+          </div>
+        </div>
+        <div class="education-item">
+          <img src="https://seeklogo.com/images/S/sma-negeri-1-tebing-tinggi-logo-0B473F81D0-seeklogo.com.png" alt="SMA N 1 Tebing Tinggi">
+          <div>
+            <strong>SMA N 1 Tebing Tinggi</strong><br />
+            2019 - 2022
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart Section -->
+    <div class="chart-box">
+      <canvas id="languageChart"></canvas>
+    </div>
+  </div>
+
+  <script>
+    const ctx = document.getElementById('languageChart').getContext('2d');
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['TypeScript', 'C++', 'JSON', 'Bash', 'Go'],
+        datasets: [{
+          label: 'Language Usage',
+          data: [48, 36, 9, 5, 2],
+          backgroundColor: [
+            '#4287f5',
+            '#f5e142',
+            '#f54291',
+            '#42f55a',
+            '#42e2f5'
+          ],
+          borderRadius: 5,
+        }]
+      },
+      options: {
+        indexAxis: 'y',
+        responsive: true,
+        plugins: {
+          legend: {
+            labels: {
+              color: '#fff'
+            }
+          },
+          title: {
+            display: true,
+            text: 'Programming Language Usage',
+            color: '#fff',
+            font: {
+              size: 18
+            }
+          }
+        },
+        scales: {
+          x: {
+            ticks: { color: '#fff' },
+            grid: { color: 'rgba(255,255,255,0.1)' }
+          },
+          y: {
+            ticks: { color: '#fff' },
+            grid: { color: 'rgba(255,255,255,0.1)' }
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+section.about-section {
+  background-color: transparent; /* ubah dari var(--dark-primary) */
+  color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 100px 120px 50px 200px;
+  box-sizing: border-box;
+}
+
+/* Styling gambar profil About */
+.about-img img {
+  width: 250px;
+  height: 250px;
+  padding: 2px;
+  border-radius: 50%;
+  border: 3px solid var(--primary);
+  box-shadow: 3px 5px 30px #03506e;
+  object-fit: cover;
+}
+
+/* Konten About */
+.about-content {
+  margin-left: 100px;
+  max-width: 600px;
+}
+
+/* Judul dan isi */
+.about-content h2 {
+  font-size: 33px;
+}
+
+.about-content h2 > span {
+  color: var(--primary);
+}
+
+.about-content p {
+  color: #c4c4c4;
+  font-size: 15px;
+}
+
+.about-content button {
+  margin-top: 30px;
+  font-size: 15px;
+}
+
+.about-content button > a {
+  text-decoration: none;
+  color: var(--dark-primary);
+}
+
+/* Responsive untuk tampilan mobile */
+@media (max-width: 768px) {
+  section.about-section {
+    flex-direction: column;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .about-img,
+  .about-content {
+    margin: 0;
+  }
+  
+  .about-content {
+    margin-top: 30px;
+    max-width: 90%;
+  }
+}

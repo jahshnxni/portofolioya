@@ -335,6 +335,131 @@ ul.social-icons {
   }
 }
 
+.edu-section {
+  margin-top: 50px;
+  padding-bottom: 100px;
+}
+
+.container {
+  display: flex;
+  align-items: flex-start;
+  padding: 0 120px 0 200px;
+  gap: 30px;
+  box-sizing: border-box;
+  background-color: transparent;
+  color: #fff;
+  flex-wrap: wrap;
+}
+
+/* Sidebar dan Tabs */
+.sidebar {
+  width: 300px;
+  flex-shrink: 0;
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.tab {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: #222;
+  color: #ccc;
+  cursor: pointer;
+  margin-right: 5px;
+  transition: 0.3s;
+}
+
+.tab.active {
+  background-color: #444;
+  color: #fff;
+}
+
+.section-dj {
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.section-dj h3 {
+  margin-bottom: 20px;
+  font-size: 18px;
+  color: #fff;
+}
+
+/* Education item */
+.education-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.education-item img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.education-item div {
+  font-size: 14px;
+  color: #c4c4c4;
+}
+
+.chart-box {
+  flex: 1;
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+/* ✅ Responsive untuk mobile */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 40px 20px;
+    align-items: stretch;
+    gap: 40px;
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+
+  .tabs {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .tab {
+    margin-right: 0;
+  }
+
+  .education-item {
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+  .education-item img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .chart-box {
+    width: 100%;
+  }
+}
+
+
 
 /* About Section */
 section.about-section {
@@ -405,6 +530,34 @@ section.about-section {
     max-width: 90%;
   }
 }
+
+@media (max-width: 1024px) {
+  .about-section {
+    flex-direction: column;
+    padding: 60px 40px; /* lebih kecil dan fleksibel */
+    text-align: center;
+  }
+
+  .about-img img {
+    width: 180px;
+    height: 180px;
+    margin-bottom: 20px;
+  }
+
+  .about-content {
+    margin-left: 0;
+    max-width: 100%;
+  }
+
+  .about-content h2 {
+    font-size: 28px;
+  }
+
+  .about-content p {
+    font-size: 14px;
+  }
+}
+
 
 
 /* Projects Section */
@@ -720,5 +873,125 @@ footer a {
   .contact-section form div input,
   textarea {
     width: 100%;
+  }
+}
+
+/* skills & education */
+#skills {
+  padding: 100px 120px 50px 200px;
+  background:transparent;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  gap: 3rem
+}
+
+.section-title {
+  color: #f6fafc;         /* Warna teks, bisa kamu ganti sesuai tema */
+  text-align: center;     /* Biar teksnya di tengah */
+  font-size: 32px;        /* Ukuran teks, opsional */
+  margin-bottom: 30px;    /* Jarak ke bawah */
+}
+
+
+.education {
+  display: flex;
+  background: transparent;
+  gap: 2rem;
+}
+
+.education .line {
+  padding: 0 ,7rem;
+}
+
+.education .line div {
+  width: 2px;
+  height: 100%;
+  background: #6d6167;
+  position: relative;
+}
+
+.education-title {
+  color: #fdfdfb;
+}
+
+.education-info p {
+  margin: .2rem 0 ;
+  color : #aaa;
+}
+
+.education-years {
+  margin-bottom: 2rem;
+  color: #9c865b; /* contoh: kuning orange */
+}
+
+/* The dot on the line*/
+.education .line div:before {
+  content:"";
+  width: 15px;
+  height: 15px;
+  background: #6d6167;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  position: absolute;
+  left: -6px;
+}
+
+.skills-list {
+  display: grid;
+  margin-top: 1.5rem;
+  color:#fff
+}
+
+.skills-right {
+  color:#fff;
+}
+
+.skills-right ul {
+  line-height: 2rem;
+  padding: 0 1rem;
+}
+
+@media (max-width: 768px) {
+  #skills {
+    padding: 60px 20px 40px 20px;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr; /* Jadi 1 kolom di HP */
+    padding: 15px;
+    gap: 2rem;
+  }
+
+  .education {
+    flex-direction: column; /* Stack vertikal di mobile */
+    gap: 1.5rem;
+  }
+
+  .education .line {
+    display: none; /* Garis vertikal bisa disembunyikan atau disesuaikan */
+  }
+
+  .skills-right ul {
+    padding: 0; /* Biar gak kepotong */
+    line-height: 1.8rem;
+  }
+
+  .section-title {
+    font-size: 26px; /* Sedikit kecil biar muat */
+    text-align: center;
+  }
+
+  .education-info {
+    text-align: center;
   }
 }

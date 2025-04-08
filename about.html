@@ -38,9 +38,7 @@
         <li>
             <a href="about.html">About</a>
         </li>
-        <li>
-            <a href="projects.html">Projects</a>
-        </li>
+        
         <li>
             <a href="contact.html">Contact</a>
         </li>
@@ -51,39 +49,171 @@
 <link rel="stylesheet" id="themeStylesheet" href="./assets/css/style.css">
 <section class="about-section" id="about">
     <div class="about-img">
-      <img src="assets/img/Starvx.jpg" alt="Sudharsan-portfolio">
+      <img src="assets/img/Starvx.jpg" alt="Starvx-portfolio">
     </div>
     <div class="about-content">
       <h4>About Me</h4>
-      <h2>I am UI Designer & <br> <span>Web Developer</span></h2>
+      <h2>I am Network Engineering & <br> <span>Web Developer</span></h2>
       <p>
-        Hello there! I'm Starvx, a first-year student at Anna University, majoring in Computer Science. My academic journey has allowed me to dive deep into Web-Development, and I'm incredibly passionate about leveraging technology to solve real-world problems. Being a student in today's dynamic digital era, I've had opportunities to work on exciting projects, some of which you can explore right here on my portfolio.
+        Hello there! I'm Starvx or you could say my real name is Dapa. I am currently studying at SMA PGRI 4 Jakarta. I am very interested in technology. My academic journey has allowed me to study Computer Development, and I am very passionate about using technology to solve real-world problems. Since I was little, I have loved solving problems related to technology. So I have an ambition to be able to get a S.Kom. Although it is difficult because more and more people like technology, especially now in the digital era. I also managed to get my first 10 million at the age of 13 by creating a growtopia private server and selling several computer products such as vps/rdp. I have a goal in my life which is to have expertise in various computer fields which I then make into a business to earn money. I hope you can find out my expertise on this portfolio website.
       </p>
       <button class="btn btn-primary">
-        <a href="https://github.com/danielace1" target="_blank">
+        <a href="https://github.com/Starpiek" target="_blank">
           Know More <i class="fa-solid fa-arrow-right-to-bracket"></i>
         </a>
       </button>
     </div>
+  
+</section>
+<section class="edu-section">
+  <div class="container">
+    <!-- Sidebar Education -->
+    <div class="sidebar">
+      <div class="section-dj">
+        <h3>Education</h3>
+        <div class="education-item">
+          <img src="./assets/img/SMA.png" alt="SMA PGRI 4">
+          <div>
+            <strong>SMA PGRI 4</strong><br>
+            2024 - belom lulus
+          </div>
+        </div>
+        <div class="education-item">
+          <img src="./assets/img/SMP.png" alt="SMPN 196">
+          <div>
+            <strong>SMPN 196</strong><br>
+            2021 - 2024
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart -->
+    <div class="chart-box">
+      <canvas id="languageChart"></canvas>
+    </div>
+  </div>
+  <!-- skills -->
+  <section id="skills">
+    <div class="skills main-container">
+    <h1 class="section-title">Skills & achievment</h1>
+
+    <div class="skills-grid">
+      <div class="skills-left">
+        <!-- Education 1-->
+        <div class="education">
+          <div class="line">
+            <div></div>
+          </div>
+
+          <div class="education-info">
+          <h4 class="education-title">English Olympiad by NOSeC</h4>
+           <p>Get a bronze medal</p>
+           <h4 class="education-years">2024</h4>
+          </div>
+        </div>
+        <!-- Education 2-->
+        <div class="education">
+          <div class="line">
+            <div></div>
+          </div>
+
+          <div class="education-info">
+          <h4 class="education-title">Olympiad Mathematics By JAAGO</h4>
+           <p>Get a bronze medal</p>
+           <h4 class="education-years">2024</h4>
+          </div>
+        </div>
+        <!-- Education 3-->
+        <div class="education">
+          <div class="line">
+            <div></div>
+          </div>
+
+          <div class="education-info">
+          <h4 class="education-title">Informatics Olympiad By OGPN</h4>
+           <p>Get a gold medal, and be the first winner in the competition</p>
+           <h4 class="education-years">2019 - 2023</h4>
+          </div>
+        </div>
+      </div>
+      <div class="skills-right">
+        <p>
+          I have some experience and programming languages at my disposal. The programming languages I mean are C++, Python, Javascript, HTML and CSS. I also have experience in the computer field such as :
+        </p>
+
+        <div class="skills-list">
+          <ul>
+            <li>Able to learn C++ programming language at the age of 13 and apply it
+              <li>Can penetrate the "Pijarsekoah" website or can be called the exam website when you are 13 years old or in 1st grade of junior high school
+                <li>Can hack CBT or exambro server and know its main IP by debugging when 15 years old
+                  <li>Tweaking the exambro application so that it cannot be detected by the system and looking for bugs in the application at the age of 14
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
   </section>
+</section>
+
+
 </main>
   <footer>
     <p>Copyright &copy; 2025 - 
-      <a href="https://github.com/danielace1" target="_blank">Sudharsan</a> - All Rights Reserved.
+      <a href="https://github.com/Starpiek" target="_blank">Starvx</a> - All Rights Reserved.
     </p>
   </footer>
-  <script>
-    document.onkeydown = function (e) {
-        if (
-          e.key === "F12" ||
-          (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "J" || e.key === "C")) ||
-          (e.ctrlKey && e.key === "U")
-        ) {
-          return false;
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+  const ctx = document.getElementById('languageChart').getContext('2d');
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['HTML', 'CSS', 'Javascript', 'Json'],
+      datasets: [{
+        label: 'Language Usage',
+        data: [48, 28, 21, 3],
+        backgroundColor: ['#3b82f6', '#facc15', '#ec4899', '#22c55e'],
+        borderRadius: 4
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: {
+          labels: { color: '#fff' }
+        },
+        title: {
+          display: true,
+          text: 'Programming Language Usage',
+          color: '#fff'
         }
-      };
-    document.addEventListener("contextmenu", (e) => e.preventDefault());
-  </script>
+      },
+      scales: {
+        x: {
+          ticks: { color: '#fff' },
+          grid: { color: '#444' }
+        },
+        y: {
+          ticks: { color: '#fff' },
+          grid: { color: '#444' }
+        }
+      }
+    }
+  });
+</script>
+<script>
+  document.onkeydown = function (e) {
+      if (
+        e.key === "F12" ||
+        (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "J" || e.key === "C")) ||
+        (e.ctrlKey && e.key === "U")
+      ) {
+        return false;
+      }
+    };
+  document.addEventListener("contextmenu", (e) => e.preventDefault());
+</script>
   <script src="./assets/js/script.js"></script>
 </div>
 </body>
