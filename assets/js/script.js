@@ -7,6 +7,12 @@ document.addEventListener("click", function (event) {
     document.getElementById("themeStylesheet").setAttribute("href", themeFile);
   }
 });    
+const validPaths = ['/', '/index.html', '/about.html', '/contact.html']; // tambah path yang sah
+  const currentPath = window.location.pathname;
+
+  if (!validPaths.includes(currentPath)) {
+    window.location.replace('/index.html');
+  }
     // Pilih kontainer latar belakang
     const bg = document.querySelector('.starry-bg');
 
